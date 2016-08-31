@@ -2,7 +2,9 @@
 
 class conexion{
 	function conectar(){
-		return mysqli_connect("localhost:3307","root","sebas2008");
+		return mysqli_connect("localhost","root","sebas2008");
+
+
 	}
 }/*
 $cnn = new	conexion();
