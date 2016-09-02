@@ -46,7 +46,7 @@ $(function() {
 
            $('#panelID').puifieldset();
 
-    $('#mb1').puimenubar({
+          $('#mb1').puimenubar({
             autoDisplay: true
         });
 

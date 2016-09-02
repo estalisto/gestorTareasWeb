@@ -1,5 +1,7 @@
 <?php
 
+
+
  ?>
  <html>
  <link rel="stylesheet" type="text/css" href="librerias/jquery-ui-1.11.1/jquery-ui.css" />
@@ -40,29 +42,51 @@
        else{
          var password = $('#password').val();
        }
-       jQuery.post("../validarUsuario.php", {
+       
+      
+/***********/
+
+
+    $.ajax({
+        url:"validaUsuario.php",
+        success:function(result){
+            if(result =="true"){
+//               document.location.href="admin.php";
+          document.location.href="../gestor/dashboard/index.php";
+
+            }else{
+               addMessage('error', {summary: 'Error:', detail: 'Usuario o contraseña es incorrecto.'});
+            }
+        },
+        data:{
+            usuario:usuario,
+            password:password
+        },
+        type:"POST"
+    });
+
+
+/**********/
+
+
+
+
+/*
+       jQuery.post("validaUsuario.php", {
          usuario:usuario,
          password:password
-
        }, function(data, textStatus){
-         alert(data);
-         if(data == 1){
-           document.location.href="../gestor/dashboard/index.php";
-
+         if(data = 1){
+           
          }
          else
          {
-         if(data == 2){
+         if(data = 2){
            addMessage('error', {summary: 'Error:', detail: 'Usuario o contraseña es incorrecto.'});
                       }
          }
-       });
+       });*/
    });
-
-
-
-
-
 
    addMessage = function(severity, msg) {
        $('#default').puimessages('show', severity, msg);

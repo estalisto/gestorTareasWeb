@@ -3,6 +3,6 @@
     session_start();
     session_destroy();
 
-    echo "<meta http-equiv='refresh' content='0;url=/gestor/index.php'>";
+    echo "<meta http-equiv='refresh' content='0;url=/gestor/'>";
 
 ?>
