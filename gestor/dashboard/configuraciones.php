@@ -1,7 +1,7 @@
 <?php
-require_once('/core/adodb5/adodb.inc.php');
+require_once('core/adodb5/adodb.inc.php');
 $DB = NewADOConnection('mysql');
-$DB->Connect('localhost:3307', 'root', 'sebas2008', 'gestor');
+$DB->Connect('localhost', 'root', 'admin12345', 'gestor');
 
 
 $niveles_acceso        = array('10'      => 'espectador',

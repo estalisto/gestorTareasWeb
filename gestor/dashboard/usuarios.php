@@ -1,5 +1,5 @@
 <?php
-require_once( 'menu.php' );
+require_once( 'menu2.php' );
 require_once( 'configuraciones.php' );
 
 $rs = $DB->Execute("select usuario ,nombres,apellidos,nivel_acceso from gestor_usuario");

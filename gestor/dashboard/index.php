@@ -14,8 +14,5 @@ require_once( 'menu2.php' );
 	<body>
     <br>
 		
-
-
-	
 	</body>
 </html>

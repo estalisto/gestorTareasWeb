@@ -42,9 +42,9 @@
           <li>
               <a data-icon="fa-gear">Administración</a>
               <ul>
-                  <li ><a data-icon="fa-pencil" href="/gestor/dashboard/usuarios.php">Usuarios</a></li>
-                  <li><a data-icon="fa-pencil" href="/gestor/dashboard/areas.php">Areas</a></li>
-                  <li><a data-icon="fa-pencil" href="/gestor/dashboard/campos_personalizados.php">Campos Personalizados </a></li>
+                  <li ><a data-icon="fa-pencil" href="../../usuarios2.php">Usuarios</a></li>
+                  <li><a data-icon="fa-pencil" href="../../areas2.php">Areas</a></li>
+                  <li><a data-icon="fa-pencil" href="../../campos_personalizados.php">Campos Personalizados </a></li>
             <li><a data-icon="fa-pencil" href="">Temas</a></li>
               </ul>
 
