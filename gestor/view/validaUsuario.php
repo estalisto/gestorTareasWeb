@@ -15,9 +15,12 @@ class usuariosDatos{
 		$sql = "SELECT u.usuario, u.clave FROM gestor_usuario u WHERE u.usuario='".$usuario."' AND u.clave= MD5('".$pass."')";
         $consulta = mysqli_query($con,$sql);
         $fila = mysqli_fetch_array($consulta);
-
+//echo $sql;
       
         if($fila["usuario"] === $usuario){
+                session_start();
+                $_SESSION["usuario"] = $fila["usuario"];
+                $_SESSION["password"] = $fila["clave"];
 
              return true;
 
@@ -28,17 +31,15 @@ class usuariosDatos{
 }
 
 $obj=new usuariosDatos();
-$usuario=$_POSt['usuario'];
-$password=$_POSt['password'];
+$usuario=$_POST['usuario1'];
+$password=$_POST['password1'];
 
 if($obj->validar($usuario,$password)){
-    session_start();
-    $_SESSION["usuario"] = $_GET["usuario"];
-    $_SESSION["pass"] = $_GET["pass"];
-    echo "1";
+
+    echo "true";
 }else{
     
-    echo "2";
+    echo "false";
 }
 
 

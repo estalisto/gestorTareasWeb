@@ -48,10 +48,11 @@
 
 
     $.ajax({
-        url:"validaUsuario.php",
+        url:"view/validaUsuario.php",
         success:function(result){
-            if(result =="true"){
+           if(result =="true"){
 //               document.location.href="admin.php";
+//alert(result);
           document.location.href="../gestor/dashboard/index.php";
 
             }else{
@@ -59,8 +60,8 @@
             }
         },
         data:{
-            usuario:usuario,
-            password:password
+            usuario1:usuario,
+            password1:password
         },
         type:"POST"
     });
